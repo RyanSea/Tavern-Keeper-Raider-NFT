@@ -37,14 +37,6 @@ contract Raider is ERC721URIStorage, Ownable {
 
     }
 
-    //Links Address to Attribute Struct
-    // function authenticate(uint discord_id, address _address) public {
-
-    //     require(bytes(Raiders[discord_id].primary_skill).length > 0, "Profile Not Created");
-    //     Raiders[discord_id]._address = _address;
-
-    // }
-
     //Mints NFT
     function mintRaider(uint discord_id, string calldata uri) public onlyOwner{
 
