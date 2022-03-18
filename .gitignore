@@ -3,7 +3,10 @@ node_modules
 coverage
 coverage.json
 typechain
+config
 
 #Hardhat files
 cache
-artifacts
+artifacts/*
+!artifacts/contracts/
+config/config.json
