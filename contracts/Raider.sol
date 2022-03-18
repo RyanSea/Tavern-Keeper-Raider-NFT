@@ -14,7 +14,7 @@ contract Raider is ERC721URIStorage, Ownable {
         uint raider_id;          //Raider NFT ID
         string primary_skill;    
         string secondary_skill;  
-        string[] achievments;    //List of Achievements (e.g. Raids)
+        string[] achievements;    //List of Achievements (e.g. Raids)
         uint[] achievement_ids;  //Achievement NFT ID's
         
     }
@@ -44,6 +44,12 @@ contract Raider is ERC721URIStorage, Ownable {
         _mint(Raiders[discord_id]._address, id);
         _setTokenURI(id, uri);
         id++;
+
+    }
+
+    function addAchievement(uint discord_id, string calldata achievement) public onlyOwner{
+
+        Raiders[discord_id].achievements.push(achievement);
 
     }
 
